@@ -1,0 +1,109 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Welcome to the experiment
+{% endblock %}
+
+{% block content %}
+        <h5> Study description </h5>
+        <p align="justify"> We invite you to take a passive role in a study measuring people’s talent.
+            Your task is to hear the results of a task performed by other participants. The participation will take approximately 1 hour.
+            You will receive a flat fee of € 15, including the show-up fee.
+        </p>
+
+        <p align="justify"> You will firstly fill out a short survey about your demographic information. Then, you will be waiting for the other participants in a separate room.
+        </p>
+
+        <p align="justify"> The completion of tasks is part of a study conducted by researchers at the European University Institute and has been approved by the European University Institute’s Ethics Review Committee.
+        </p>
+
+        <h5> Data processing </h5>
+
+        <p align="justify"> All data will be stored anonymously and cannot be linked to specific names.
+            You will not be identifiable either through the data that is collected, or privately or publicly by the researchers responsible for this study or any other person.
+            It will be kept under password protection.
+        </p>
+
+        <p align="justify"> Basic demographic information will be collected. The data collected in this study will only be used for academic research purposes.
+        </p>
+
+        <p align="justify"> Anonymised data will be analysed statistically by the researchers and are intended for use in an academic publication.
+            Anonymised information in this study may also be shown to other researchers and participants in a future study.
+            It may also be made available to the international research community, for transparency and re-usage in future studies, which may involve international data transfers.
+        </p>
+
+        <p align="justify"> Your data is protected by the EUI’s data protection policy (PD10/2019). You may contact EUI’s data protection officer through data_protection_officer@EUI.eu
+        </p>
+
+        <p align="justify"> If you click "Next" button, you will be directed to the consent form.
+        </p>
+
+    {% block styles %}
+    <style type="text/css">
+        .otree-title {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 0 10px 0;
+            padding: 20px;
+        }
+
+        .otree-timer {
+            background: lightsteelblue;
+            color: white;
+            border-color: white;
+        }
+
+        .otree-body {
+            text-indent: each-line;
+        }
+
+        .box-heading {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 10px 10px 10px 24px;
+        }
+
+        .table-style {
+            color: black;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .table-borders {
+            border: solid;
+            border: steelblue;
+            background-color: #ecf2f9;
+            align-content: center;
+
+        }
+
+        .offer {
+            background-color: whitesmoke;
+            color: navy;
+            padding: 1px 10px 1px 10px;
+            border: groove;
+            border-color: lightsteelblue;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        .otree-btn-next {
+            background-color: steelblue;
+            color: white;
+            padding: 5px 10px 5px 10px;
+
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: bolder;
+            color: #24435c;
+        }
+
+    </style>
+{% endblock %}
+
+    {% next_button %}
+
+{% endblock %}
+

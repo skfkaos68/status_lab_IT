@@ -1,0 +1,107 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instruction
+{% endblock %}
+
+{% block content %}
+        <p align="justify"> Welcome to this experiment. </p>
+
+        <h5><p align="justify"> You are of type C. </p></h5>
+
+        <p> Your role in today’s experiment is a passive one. You will not be asked to make any decisions.
+        </p>
+
+        <p align="justify"> Your only task is to hear the results of a task performed by one of the other participants.
+            You will not be informed about the content of this task. All you need to know is that it is an important task that is often used to measure people’s talents.
+            Many scientific studies have found that people who have a high score in a task like this are more successful in professional life than people who have a low score.
+            You will not be told, however, what is typically a good or a bad score for this task.
+        </p>
+
+        <p align="justify"> You will be seated in this room.
+            While you are waiting for the other participants, feel free to read anything you like, or to browse your phone.
+            Before the other participants have started their task five of them will be taken to you, one at a time.
+            Each will read a text to you and then return to the laboratory. After all the other participants have completed their tasks, the same five will come here again, one at a time.
+            They will read to you their score and how this ranks amongst the five participants.
+        </p>
+
+        <p align="justify"> You may not speak or interact with the other participants in any way.
+        </p>
+
+        <p align="justify"> For your role in today’s experiment, you will receive 10 euros on top of the 5 euros show-up fee.
+            You will be paid and dismissed after the participants have told each of you their scores.
+        </p>
+
+        <p align="justify"> Finally, please treat the room you will be in with respect. You are a guest here, so please do not touch anything that is not yours.
+        </p>
+
+    {% block styles %}
+    <style type="text/css">
+        .otree-title {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 0 10px 0;
+            padding: 20px;
+        }
+
+        .otree-timer {
+            background: lightsteelblue;
+            color: white;
+            border-color: white;
+        }
+
+        .otree-body {
+            text-indent: each-line;
+        }
+
+        .box-heading {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 10px 10px 10px 24px;
+        }
+
+        .table-style {
+            color: black;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .table-borders {
+            border: solid;
+            border: steelblue;
+            background-color: #ecf2f9;
+            align-content: center;
+
+        }
+
+        .offer {
+            background-color: whitesmoke;
+            color: navy;
+            padding: 1px 10px 1px 10px;
+            border: groove;
+            border-color: lightsteelblue;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        .otree-btn-next {
+            background-color: steelblue;
+            color: white;
+            padding: 5px 10px 5px 10px;
+
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: bolder;
+            color: #24435c;
+        }
+
+    </style>
+{% endblock %}
+
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}
+

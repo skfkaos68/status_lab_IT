@@ -1,0 +1,98 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Statement of consent
+{% endblock %}
+
+{% block content %}
+       <div class="container">
+        <ul class="myUL">
+        <ol type="1">
+      <p><li align="justify"> I have received sufficient information about this research project and understand my role in it. The purpose of my participation in this project and the future processing of my personal data has been explained to me and are clear.
+        </li></p>
+      <p><li align="justify"> My participation in this research project is completely voluntary. There is no explicit or implicit coercion whatsoever to participate.
+        </li></p>
+      <p><li align="justify"> Participation involves completing short surveys and a series of tasks. </li></p>
+      <p><li align="justify"> If I feel uncomfortable in any way during the participation, I have the right to withdraw from the participation and ask that the data collected prior to the withdrawal will be deleted.
+        </li></p>
+      <p><li align="justify"> I have been given the explicit guarantee that the researcher will not identify me by name or function in any reports using information obtained from this interview, and that my confidentiality as a participant in this study remains secure. Personal data will be processed in full compliance with the EUI’s Data Protection Policy. </li></p>
+      <p><li align="justify"> I was assured that this research project has been reviewed and approved by the EUI Ethics Committee. The EUI Ethics Committee may be contacted through ethics@eui.eu for any questions concerning ethics as well as the EUI’s DPO may be contacted at data_protection_officer@eui.eu for any questions concerning data protection. </li></p>
+      <p><li align="justify"> I have carefully read and fully understood the points and statements of this form. All my questions were answered to my satisfaction, and I voluntarily agree to participate in this study. </li></p>
+</ol>
+    </ul>
+</div>
+
+<p align="right"> If you have any further information or questions, please contact: tae.yun@eui.eu </p>
+
+<p align="justify"> By clicking “Next” button below, I agree to participate in a research project conducted by the PhD researcher Tae Kyeong Yun, from the European University Institute (EUI) in Florence, Italy. </p>
+
+
+    {% block styles %}
+    <style type="text/css">
+        .otree-title {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 0 10px 0;
+            padding: 20px;
+        }
+
+        .otree-timer {
+            background: lightsteelblue;
+            color: white;
+            border-color: white;
+        }
+
+        .otree-body {
+            text-indent: each-line;
+        }
+
+        .box-heading {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 10px 10px 10px 24px;
+        }
+
+        .table-style {
+            color: black;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .table-borders {
+            border: solid;
+            border: steelblue;
+            background-color: #ecf2f9;
+            align-content: center;
+
+        }
+
+        .offer {
+            background-color: whitesmoke;
+            color: navy;
+            padding: 1px 10px 1px 10px;
+            border: groove;
+            border-color: lightsteelblue;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        .otree-btn-next {
+            background-color: steelblue;
+            color: white;
+            padding: 5px 10px 5px 10px;
+
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: bolder;
+            color: #24435c;
+        }
+
+    </style>
+{% endblock %}
+
+    {% next_button %}
+
+{% endblock %}
+

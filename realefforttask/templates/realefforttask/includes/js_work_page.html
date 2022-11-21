@@ -1,0 +1,33 @@
+{% load otree %}
+
+<script>
+
+    // Handle messages sent by the server.
+    var $answer = $('input#answer');
+    var $btn_answer = $("button.answer");
+
+    const liveRecv = (data) => {
+        var obj = data;
+        $('div.task-container').html(obj.task_body);
+        $('span#num_tasks_total').html(obj.num_tasks_total);
+        $('span#num_tasks_correct').html(obj.num_tasks_correct);
+    };
+
+    $btn_answer.on("click", function () {
+        var msg = {
+            'answer': $answer.val(),
+        };
+        liveSend(msg)
+            ;
+        $answer.val('').focus();
+    });
+    $answer.keydown(function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            $btn_answer.click();
+            return false;
+        }
+    });
+
+
+</script>
