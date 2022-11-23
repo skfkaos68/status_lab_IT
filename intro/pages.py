@@ -57,8 +57,8 @@ class Instruction_C(Page):
         player = self.player
         return player.id_in_group == 11
 
-    form_model = 'player'
-    form_fields = ['type']
+    # form_model = 'player'
+    # form_fields = ['type']
 
 class Instruction_C2(Page):
     def is_displayed(self):
