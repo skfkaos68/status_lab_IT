@@ -18,12 +18,12 @@ doc = """
 
 class Constants(BaseConstants):
     name_in_url = 'realefforttask'
-    players_per_group = None
+    players_per_group = 11
     num_rounds = 1
     # this parameter defines how much time a user will stay on a RET page per round (in seconds)
     task_time = 3000
     PRACTICE_TIME_SEC = 60
-    WORKING_TIME_SEC = 10
+    WORKING_TIME_SEC = 900
 
 class Subsession(BaseSubsession):
     def creating_session(self):

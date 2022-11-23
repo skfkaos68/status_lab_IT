@@ -35,7 +35,7 @@ SESSION_CONFIGS = [
     {
         'name': 'realefforttask',
         'display_name': 'Real Effort Task - 2 matrices',
-        'num_demo_participants': 11,
+        'num_demo_participants': 110,
         'app_sequence': ['intro','realefforttask'],
         'task': 'TwoMatrices',
         'task_params': {'difficulty': 10},
