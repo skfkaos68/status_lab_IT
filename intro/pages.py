@@ -41,16 +41,16 @@ class Instruction_A(Page):
         player = self.player
         return player.id_in_group >=  1 and player.id_in_group <= 5
 
-    form_model = 'player'
-    form_fields = ['type']
+    # form_model = 'player'
+    # form_fields = ['type']
 
 class Instruction_B(Page):
     def is_displayed(self):
         player = self.player
         return player.id_in_group > 5 and player.id_in_group <= 10
 
-    form_model = 'player'
-    form_fields = ['type']
+    # form_model = 'player'
+    # form_fields = ['type']
 
 class Instruction_C(Page):
     def is_displayed(self):

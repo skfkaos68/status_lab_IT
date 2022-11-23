@@ -2,33 +2,24 @@
 {% load otree static %}
 
 {% block title %}
-    Task completed
+    Please answer the following questions carefully
 {% endblock %}
 
 {% block content %}
 
-        <p align="justify"> <h5>
-        Thank you for your participation!
-         </h5></p>
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
 
-        <p align="justify">
-        Based on your total number of correct answers, your additional payment is {{ participant.payoff }}
-        </p>
 
-        <p align="justify">
-        {% if participant.payoff == 0 %}
-            Together with your participation fee, you will get a total of € 7
-
-        {% else %}
-            Together with your participation fee, you will get a total of {{ participant.payoff_plus_participation_fee }}
-
-        {% endif %}
-        </p>
-
-        <p>
-        You will collect your payment shortly.
-        </p>
-
+    {% next_button %}
 
     {% block styles %}
     <style type="text/css">

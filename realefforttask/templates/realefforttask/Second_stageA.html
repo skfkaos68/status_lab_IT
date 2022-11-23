@@ -2,31 +2,21 @@
 {% load otree static %}
 
 {% block title %}
-    Task completed
+    Second stage
 {% endblock %}
 
 {% block content %}
 
-        <p align="justify"> <h5>
-        Thank you for your participation!
-         </h5></p>
+        <p align="justify"> This brings us to the end of the first stage of the experiment.
+            The experimenter at the computer server will now prepare the envelopes with information about your score and rank amongst the participants of type A.
+            In the meantime, we ask you to fill out a brief questionnaire on the next pages. </p>
 
-        <p align="justify">
-        Based on your total number of correct answers, your additional payment is {{ participant.payoff }}
+        <p align="justify"> Now you will be asked to inform the participant of type C about your score and your rank. Recall that every type A player is visiting the same participant.
+            Each participant of type A will be accompanied by the experimenter to the room in which the participant of type C is waiting.
+            There, each A participant will open the envelop and read aloud the text to the C participant. Then all A participants will return to their desks. Participants of type B will remain seated during this process and are not informed about what the A participants will do.
         </p>
 
-        <p align="justify">
-        {% if participant.payoff == 0 %}
-            Together with your participation fee, you will get a total of € 7
-
-        {% else %}
-            Together with your participation fee, you will get a total of {{ participant.payoff_plus_participation_fee }}
-
-        {% endif %}
-        </p>
-
-        <p>
-        You will collect your payment shortly.
+        <p align="justify"> Remember that the C participant does not know what task you did and what the score means. He or she has only been told that a higher score is thought to lead to a more successful professional life. Importantly, this participant will know your score and how it ranks to the other A participants.
         </p>
 
 
@@ -93,6 +83,10 @@
 
     </style>
 {% endblock %}
+
+    {% formfields %}
+
+    {% next_button %}
 
 {% endblock %}
 

@@ -2,33 +2,12 @@
 {% load otree static %}
 
 {% block title %}
-    Task completed
+    Please answer the following open questions in a few sentences
 {% endblock %}
 
 {% block content %}
-
-        <p align="justify"> <h5>
-        Thank you for your participation!
-         </h5></p>
-
-        <p align="justify">
-        Based on your total number of correct answers, your additional payment is {{ participant.payoff }}
-        </p>
-
-        <p align="justify">
-        {% if participant.payoff == 0 %}
-            Together with your participation fee, you will get a total of € 7
-
-        {% else %}
-            Together with your participation fee, you will get a total of {{ participant.payoff_plus_participation_fee }}
-
-        {% endif %}
-        </p>
-
-        <p>
-        You will collect your payment shortly.
-        </p>
-
+    {% formfields %}
+    {% next_button %}
 
     {% block styles %}
     <style type="text/css">

@@ -20,11 +20,62 @@ class WorkPage(Page):
         self.player._num_tasks_total = self.player.num_tasks_total(page_name='WorkPage')
         self.player.set_payoff()
 
-class Results(Page):
+class Type_attention(Page):
+  form_model = 'player'
+  form_fields = ['type']
+
+class Second_stageA(Page):
     def is_displayed(self):
         player = self.player
-        return player.id_in_group >=  1 and player.id_in_group <= 10
+        return player.type ==0
+
+class Second_stageB(Page):
+    def is_displayed(self):
+        player = self.player
+        return player.type==1
+class Post_Survey(Page):
+    pass
+    # def is_displayed(self):
+    #     player = self.player
+    #     return player.id_in_group >=  1 and player.id_in_group <= 10
+
+    form_model = 'player'
+    form_fields = ['agree_statement', 'agree_statement2', 'agree_statement3', 'agree_statement4']
+
+class Post_Survey2(Page):
+    pass
+    # def is_displayed(self):
+    #     player = self.player
+    #     return player.id_in_group >=  1 and player.id_in_group <= 10
+
+    form_model = 'player'
+    form_fields = ['Video_frequency', 'Video_frequency2', 'Video_frequency3']
+
+class Post_Survey3(Page):
+    pass
+    # def is_displayed(self):
+    #     player = self.player
+    #     return player.id_in_group >=  1 and player.id_in_group <= 10
+
+    form_model = 'player'
+    form_fields = ['Video_opinion', 'Video_opinion2', 'Video_opinion3']
+
+class Post_Survey4(Page):
+    pass
+    # def is_displayed(self):
+    #     player = self.player
+    #     return player.id_in_group >=  1 and player.id_in_group <= 10
+
+    form_model = 'player'
+    form_fields = ['open_question', 'open_question2', 'open_question3', 'open_question4']
+
+class Results(Page):
+    pass
+    # def is_displayed(self):
+    #     player = self.player
+    #     return player.id_in_group >=  1 and player.id_in_group <= 10
 
 page_sequence = [
-    WorkPage, Results
+    WorkPage, Type_attention, Second_stageA, Second_stageB,
+    Post_Survey, Post_Survey2, Post_Survey3, Post_Survey4, Results
 ]

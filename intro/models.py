@@ -18,12 +18,15 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'intro'
-    players_per_group = 11
+    players_per_group = None
     num_rounds = 1
 
 class Subsession(BaseSubsession):
-    def creating_session(subsession):
-        subsession.group_randomly()
+    def creating_session(self):
+        self.group_randomly()
+        # if subsession.round_number == 1:
+        #     for player in subsession.get_players():
+        #         player.participant.id_in_group = player.id_in_group
 
 class Group(BaseGroup):
     pass
@@ -58,9 +61,9 @@ class Player(BasePlayer):
         [2, 'C'],
     ], widget=widgets.RadioSelect, label="What is your player type?")
 
-    number_of_AB = models.IntegerField(
-        widget=widgets.RadioSelect,
-        choices=[1, 2, 3, 4, 5], label="How many participants did you meet?")
+    # number_of_AB = models.IntegerField(
+    #     widget=widgets.RadioSelect,
+    #     choices=[1, 2, 3, 4, 5], label="How many participants did you meet?")
 
     # consent_accepted = models.BooleanField()
 

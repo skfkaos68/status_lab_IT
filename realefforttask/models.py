@@ -23,7 +23,7 @@ class Constants(BaseConstants):
     # this parameter defines how much time a user will stay on a RET page per round (in seconds)
     task_time = 3000
     PRACTICE_TIME_SEC = 60
-    WORKING_TIME_SEC = 20
+    WORKING_TIME_SEC = 10
 
 class Subsession(BaseSubsession):
     def creating_session(self):
@@ -42,12 +42,116 @@ class Subsession(BaseSubsession):
         # for p in self.get_players():
         #     p.get_or_create_task()
 
-
 class Group(BaseGroup):
     ...
 
 
+
 class Player(BasePlayer):
+    type = models.IntegerField(choices=[
+        [0, 'A'],
+        [1, 'B'],
+    ], widget=widgets.RadioSelect, label="What is your player type?")
+
+    agree_statement = models.IntegerField(choices=[
+        [0, 'Strongly disagree'],
+        [1, 'Disagree'],
+        [2, 'Somewhat disagree'],
+        [3, 'Neither agree nor disagree'],
+        [4, 'Somewhat agree'],
+        [5, 'Agree'],
+        [6, 'Strongly agree']
+    ], widget=widgets.RadioSelect, label="I am very comfortable using digital interaction tools like video calls")
+
+    agree_statement2 = models.IntegerField(choices=[
+        [0, 'Strongly disagree'],
+        [1, 'Disagree'],
+        [2, 'Somewhat disagree'],
+        [3, 'Neither agree nor disagree'],
+        [4, 'Somewhat agree'],
+        [5, 'Agree'],
+        [6, 'Strongly agree']
+    ], widget=widgets.RadioSelect, label="I am very competent in using digital interaction tools like video calls")
+
+    agree_statement3 = models.IntegerField(choices=[
+        [0, 'Strongly disagree'],
+        [1, 'Disagree'],
+        [2, 'Somewhat disagree'],
+        [3, 'Neither agree nor disagree'],
+        [4, 'Somewhat agree'],
+        [5, 'Agree'],
+        [6, 'Strongly agree']
+    ], widget=widgets.RadioSelect, label="Because of digital tools like video calls, people are less inclined to meet in real life")
+
+    agree_statement4 = models.IntegerField(choices=[
+        [0, 'Strongly disagree'],
+        [1, 'Disagree'],
+        [2, 'Somewhat disagree'],
+        [3, 'Neither agree nor disagree'],
+        [4, 'Somewhat agree'],
+        [5, 'Agree'],
+        [6, 'Strongly agree']
+    ], widget=widgets.RadioSelect, label="Because of digital tools like video calls, it is easier to maintain social relationships")
+
+    Video_frequency = models.IntegerField(choices=[
+        [0, 'Never'],
+        [1, 'Rarely'],
+        [2, 'Sometimes'],
+        [3, 'Often'],
+        [4, 'Very often']
+    ], widget=widgets.RadioSelect, label="How frequently do you use video calls with your family?")
+
+    Video_frequency2 = models.IntegerField(choices=[
+        [0, 'Never'],
+        [1, 'Rarely'],
+        [2, 'Sometimes'],
+        [3, 'Often'],
+        [4, 'Very often']
+    ], widget=widgets.RadioSelect, label="How frequently do you use video calls with your friends?")
+
+    Video_frequency3 = models.IntegerField(choices=[
+        [0, 'Never'],
+        [1, 'Rarely'],
+        [2, 'Sometimes'],
+        [3, 'Often'],
+        [4, 'Very often']
+    ], widget=widgets.RadioSelect, label="How frequently do you use video calls at your work/university?")
+
+    Video_opinion = models.IntegerField(choices=[
+        [0, 'Very negative'],
+        [1, 'negative'],
+        [2, 'Somewhat negative'],
+        [3, 'Neither negative nor positive'],
+        [4, 'Somewhat positive'],
+        [5, 'Positive'],
+        [6, 'Very positive']
+    ], widget=widgets.RadioSelect, label="What is your opinion about using video calls for your social relationships and interactions with your family?")
+
+    Video_opinion2 = models.IntegerField(choices=[
+        [0, 'Very negative'],
+        [1, 'negative'],
+        [2, 'Somewhat negative'],
+        [3, 'Neither negative nor positive'],
+        [4, 'Somewhat positive'],
+        [5, 'Positive'],
+        [6, 'Very positive']
+    ], widget=widgets.RadioSelect, label="What is your opinion about using video calls for your social relationships and interactions with your friends?")
+
+    Video_opinion3 = models.IntegerField(choices=[
+        [0, 'Very negative'],
+        [1, 'negative'],
+        [2, 'Somewhat negative'],
+        [3, 'Neither negative nor positive'],
+        [4, 'Somewhat positive'],
+        [5, 'Positive'],
+        [6, 'Very positive']
+    ], widget=widgets.RadioSelect, label="What is your opinion about using video calls for your social relationships and interactions at your work/university?")
+
+    open_question = models.LongStringField(label= "Do you remember other participants who you met in the waiting room at the beginning of the experiment? If yes, please write down how many people you remember and their sexes.")
+    open_question2 = models.LongStringField(label="Compared to you, how well do you expect the other group members’ task performance?")
+    open_question3 = models.LongStringField(label="Do you think your performance would be different if you did the task through video conferencing? If yes, please write a reason with more than one sentence.")
+    open_question4 = models.LongStringField(label="Do you think video conferencing can advantage and/or disadvantage certain social groups? If yes, please write a reason with a few sentences.")
+
     _num_tasks_correct = models.IntegerField(default=0)
     _num_tasks_total = models.IntegerField(default=0)
     def set_payoff(self):

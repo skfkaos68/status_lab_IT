@@ -2,32 +2,18 @@
 {% load otree static %}
 
 {% block title %}
-    Task completed
+    Second stage
 {% endblock %}
 
 {% block content %}
 
-        <p align="justify"> <h5>
-        Thank you for your participation!
-         </h5></p>
-
-        <p align="justify">
-        Based on your total number of correct answers, your additional payment is {{ participant.payoff }}
+        <p align="justify"> This brings us to the end of the first stage of the experiment.
         </p>
 
-        <p align="justify">
-        {% if participant.payoff == 0 %}
-            Together with your participation fee, you will get a total of € 7
-
-        {% else %}
-            Together with your participation fee, you will get a total of {{ participant.payoff_plus_participation_fee }}
-
-        {% endif %}
+        <p align="justify"> In this stage all B participants are required to remain quietly seated at their desks and wait till the end of stage 2.
         </p>
 
-        <p>
-        You will collect your payment shortly.
-        </p>
+        <p align="justify"> Meanwhile, we ask you to fill out a brief questionnaire on the next pages. </p>
 
 
     {% block styles %}
@@ -93,6 +79,10 @@
 
     </style>
 {% endblock %}
+
+    {% formfields %}
+
+    {% next_button %}
 
 {% endblock %}
 

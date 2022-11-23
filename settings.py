@@ -15,11 +15,20 @@ EXTENSION_APPS = [
 AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY')
 
+
 SESSION_CONFIG_DEFAULTS = {
     'real_world_currency_per_point': 1.00,
     'participation_fee': 5.00,
     'doc': "",
 }
+
+# PARTICIPANT_FIELDS = [
+#     'id_in_group'
+# ]
+
+SESSION_FIELDS = [
+    'matching_matrix'
+]
 
 SESSION_CONFIGS = [
     
@@ -35,7 +44,6 @@ SESSION_CONFIGS = [
 
 ]
 
-PARTICIPANT_FIELDS = ['role']
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
