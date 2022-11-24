@@ -41,8 +41,14 @@ class Instruction_A(Page):
         player = self.player
         return player.id_in_group >=  1 and player.id_in_group <= 5
 
-    # form_model = 'player'
-    # form_fields = ['type']
+class Instruction_A2(Page):
+    def is_displayed(self):
+        player = self.player
+        return player.id_in_group >=  1 and player.id_in_group <= 5
+
+    form_model = 'player'
+    form_fields = ['type']
+
 
 class Instruction_B(Page):
     def is_displayed(self):
@@ -51,14 +57,21 @@ class Instruction_B(Page):
 
     # form_model = 'player'
     # form_fields = ['type']
+class Instruction_B2(Page):
+    def is_displayed(self):
+        player = self.player
+        return player.id_in_group > 5 and player.id_in_group <= 10
+
+    form_model = 'player'
+    form_fields = ['type']
 
 class Instruction_C(Page):
     def is_displayed(self):
         player = self.player
         return player.id_in_group == 11
 
-    # form_model = 'player'
-    # form_fields = ['type']
+    form_model = 'player'
+    form_fields = ['type']
 
 class Instruction_C2(Page):
     def is_displayed(self):
@@ -79,5 +92,6 @@ class Results(Page):
     pass
 
 page_sequence = [Consent_A, Consent_B, Consent_C, Consent_A2, Consent_B2, Consent_C2, Survey,
-                 Instruction_A, Instruction_B, Instruction_C, Instruction_C2, Instruction_C3,
+                 Instruction_A, Instruction_A2, Instruction_B, Instruction_B2,
+                 Instruction_C, Instruction_C2, Instruction_C3,
                  Result_C]

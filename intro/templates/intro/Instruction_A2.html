@@ -1,0 +1,101 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instruction (2/2)
+{% endblock %}
+
+{% block content %}
+        <p align="justify"> Remember that studies have found that people who do well in a task like this are more successful in professional life. You will not know how people typically perform in this task.
+            Nor will you know how other participants scored in the task today. </p>
+
+        <p align="justify"> After this stage, you will be asked to inform the participant of type C about your score. You will tell her your score and your rank amongst the participants of type A. Note that each of the A players will report to the same C player. </p>
+
+        <p align="justify"> You will have to go to a separate room where this participant will be waiting. This participant does not know what task you did and what the score means.
+            He or she has only been told that a higher score is thought to lead to a more successful professional life. Importantly, this participant will hear your score and how it ranks to the other A participants.
+            Only the participant of type C will be able to make this comparison. </p>
+
+        <p align="justify"> As explained, the experimenter at the computer server will not be able to link scores to individuals.
+            He will prepare closed envelopes that will be distributed by a different experimenter. The first set of envelopes will only be distributed to participants of type A.
+            This envelop will contain your score, your rank, and the text you will need to read to the participant of type C. The other experimenter will not know the contents of the envelop he is handing to you. </p>
+
+        <p align="justify"> After all participants of type A have reported to the participant of type C, the experimenter at the computer server will prepare envelopes for all participants.
+            These include your earnings and a receipt for you to sign. Once again, the experimenter handing out the envelopes does not know its contents, so your earnings in today’s experiment remain anonymous. </p>
+
+        <p align="justify"> We would like you to see the type C participant that you will present your score and rank to.
+            For this reason, each of you will now first leave the room and read aloud –to the C participant– a text that will be given to you.
+            Note that each of you will be going to the same C participant. </p>
+
+    {% block styles %}
+    <style type="text/css">
+        .otree-title {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 0 10px 0;
+            padding: 20px;
+        }
+
+        .otree-timer {
+            background: lightsteelblue;
+            color: white;
+            border-color: white;
+        }
+
+        .otree-body {
+            text-indent: each-line;
+        }
+
+        .box-heading {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 10px 10px 10px 24px;
+        }
+
+        .table-style {
+            color: black;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .table-borders {
+            border: solid;
+            border: steelblue;
+            background-color: #ecf2f9;
+            align-content: center;
+
+        }
+
+        .offer {
+            background-color: whitesmoke;
+            color: navy;
+            padding: 1px 10px 1px 10px;
+            border: groove;
+            border-color: lightsteelblue;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        .otree-btn-next {
+            background-color: steelblue;
+            color: white;
+            padding: 5px 10px 5px 10px;
+
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: bolder;
+            color: #24435c;
+        }
+
+    </style>
+{% endblock %}
+
+    {% formfields %}
+
+    <h5><p align="justify"> Please do not click “Next”. The experimenter will announce when to click the “Next” button. </p></h5>
+    <h5><p align="justify"> If you click “Next”. The task will start immediately. </p></h5>
+
+    {% next_button %}
+
+{% endblock %}
+

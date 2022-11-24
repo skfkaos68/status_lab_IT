@@ -69,6 +69,11 @@ class Post_Survey4(Page):
     form_model = 'player'
     form_fields = ['open_question', 'open_question2', 'open_question3', 'open_question4']
 
+# class Wait_others(WaitPage):
+#     def is_displayed(self):
+#         player = self.player
+#         return player.type==1 and player.type==0
+
 class Results(Page):
     pass
     # def is_displayed(self):
