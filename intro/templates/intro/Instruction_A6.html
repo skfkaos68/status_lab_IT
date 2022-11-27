@@ -2,25 +2,18 @@
 {% load otree static %}
 
 {% block title %}
-    Per favore, rispondi con attenzione alle seguenti domande
+    Istruzione
 {% endblock %}
 
 {% block content %}
+         <p align="justify"> Dopo questa fase, ti verrà chiesto di informare il partecipante di tipo C del tuo punteggio. Le dirai al partecipante di tipo C il tuo punteggio e il tuo grado tra i partecipanti di tipo A. Nota che ciascuno dei giocatori A riporterà il punteggio allo stesso giocatore C.
+        </p>
 
-    {% formfields %}
+        <p align="justify"> Dovrai andare in una stanza separata dove aspetterai questo partecipante. Questo partecipante non sa quale compito hai svolto e cosa significa il punteggio. Gli è stato solo detto che si pensa che un punteggio più alto porti a una vita professionale di maggior successo. È importante tenere presente che questo partecipante ascolterà il tuo punteggio e come si classifica rispetto agli altri partecipanti A. Solo il partecipante di tipo C potrà davvero effettuare questo confronto.
+        </p>
 
-{#<table class="table">#}
-{#    {% for field in form %}#}
-{#        <tr>#}
-{#            <th>{{ field.label }}</th>#}
-{#            {% for choice in field %}#}
-{#                <td>{{ choice }}</td>#}
-{#            {% endfor %}#}
-{#        </tr>#}
-{#    {% endfor %}#}
-{#</table>#}
-
-    {% next_button %}
+        <p align="justify"> Come già spiegato, lo sperimentatore al server del computer non sarà in grado di collegare i punteggi agli individui. Preparerà buste chiuse che saranno distribuite da un altro sperimentatore. Il primo set di buste verrà distribuito solo ai partecipanti di tipo A. Questa busta conterrà il tuo punteggio, la tua classifica e il testo che dovrai leggere al partecipante di tipo C. L'altro sperimentatore non conoscerà il contenuto della busta.
+        </p>
 
     {% block styles %}
     <style type="text/css">
@@ -85,6 +78,10 @@
 
     </style>
 {% endblock %}
+
+    {% formfields %}
+
+    {% next_button %}
 
 {% endblock %}
 

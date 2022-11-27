@@ -1,38 +1,18 @@
 {% extends "global/Page.html" %}
-{% load staticfiles otree_tags %}
+{% load otree static %}
 
 {% block title %}
-    Esercizio di somma di due matrici
+    Istruzione
 {% endblock %}
 
 {% block content %}
-    <!--The next line adds the task specific content, getting the file name through the get_or_create_task function.-->
-    <div class="task-container">{{ player.get_or_create_task.html_body|safe }}</div>
-    <div>La tua risposta è:</div>
-    <input type="text" id="answer" class="offer" style="background-color: white" required>
-    <button class="answer btn btn-outline-dark" type="button" data-feedback="false">Rispondere</button>
+         <p align="justify"> Dopo aver inserito una somma, il computer ti dirà se è corretta o errata (tieni presente che il tempo continuerà a scorrere mentre vedi questo risultato). Successivamente, indipendentemente dal fatto che la tua risposta sia corretta o errata, apparirà una nuova coppia di matrici. Ciò significa che per ogni coppia hai solo un tentativo di fornire la risposta corretta. Tuttavia, ci saranno nuove matrici fintanto che non scadono i 15 minuti. Consentiremo un massimo di 50 tentativi. Eventuali matrici che tenti di risolvere dopo il 50° non verranno conteggiate per il tuo punteggio finale.
+        </p>
 
-    <p> Numero di tentativi: <span id="num_tasks_total">{{ player.num_tasks_total }}</span></p>
-    <p> Numero di somme corretta: <span id="num_tasks_correct"> {{ player.num_tasks_correct }}</span></p>
-{% endblock %}
+        <p align="justify"> Dopo che l'attività è stata completata, ti informeremo del tuo punteggio e su come si classifica tra i cinque partecipanti di tipo A. Per fare ciò, lo sperimentatore sul server del computer confronterà il punteggio di tutti e cinque i partecipanti di tipo A. Per garantire il tuo anonimato, questo sperimentatore è seduto in modo da non poterti identificare. Può collegare il tuo punteggio al tuo station ID, ma non può vedere chi è seduto in ogni stazione in particolare.
+        </p>
 
-{% block scripts %}
-{% include 'realefforttask/includes/js_work_page.html' %}
-    <script>
-        $(function () {
-            $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
-                    event.preventDefault();
-                    return false;
-                }
-            });
-
-
-        });
-    </script>
-    
-{% endblock %}
-{% block styles %}
+    {% block styles %}
     <style type="text/css">
         .otree-title {
             background-color: steelblue;
@@ -95,3 +75,10 @@
 
     </style>
 {% endblock %}
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
+

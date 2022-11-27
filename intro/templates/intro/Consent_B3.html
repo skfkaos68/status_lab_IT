@@ -1,38 +1,22 @@
 {% extends "global/Page.html" %}
-{% load staticfiles otree_tags %}
+{% load otree static %}
 
 {% block title %}
-    Esercizio di somma di due matrici
+   Elaborazione dati (2/2)
 {% endblock %}
 
 {% block content %}
-    <!--The next line adds the task specific content, getting the file name through the get_or_create_task function.-->
-    <div class="task-container">{{ player.get_or_create_task.html_body|safe }}</div>
-    <div>La tua risposta è:</div>
-    <input type="text" id="answer" class="offer" style="background-color: white" required>
-    <button class="answer btn btn-outline-dark" type="button" data-feedback="false">Rispondere</button>
 
-    <p> Numero di tentativi: <span id="num_tasks_total">{{ player.num_tasks_total }}</span></p>
-    <p> Numero di somme corretta: <span id="num_tasks_correct"> {{ player.num_tasks_correct }}</span></p>
-{% endblock %}
+        <p align="justify"> I dati anonimizzati saranno analizzati statisticamente dai ricercatori e sono destinati all'uso in una pubblicazione di tipo accademico. Le informazioni anonime in questo studio potranno essere condivise con altri ricercatori e partecipanti a studi futuri. Lo studio potra’ essere messo a disposizione della comunità di ricerca internazionale, per la trasparenza e il riutilizzo in studi futuri, che potranno comportare trasferimenti internazionali di dati.
+        </p>
 
-{% block scripts %}
-{% include 'realefforttask/includes/js_work_page.html' %}
-    <script>
-        $(function () {
-            $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
-                    event.preventDefault();
-                    return false;
-                }
-            });
+        <p align="justify"> I dati sono protetti dalla legislazione comunitaria, e in particolare dal IUE (PD10/2019). È possibile contattare il responsabile della protezione dati dell' IUE al seguente indirizzo: data_protection_officer@EUI.eu
+        </p>
 
+        <p align="justify"> Fai clic sul pulsante “Successivo” per essere re-indirizzato al modulo di consenso.
+        </p>
 
-        });
-    </script>
-    
-{% endblock %}
-{% block styles %}
+    {% block styles %}
     <style type="text/css">
         .otree-title {
             background-color: steelblue;
@@ -95,3 +79,8 @@
 
     </style>
 {% endblock %}
+
+    {% next_button %}
+
+{% endblock %}
+

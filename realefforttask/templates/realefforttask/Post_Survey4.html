@@ -2,11 +2,25 @@
 {% load otree static %}
 
 {% block title %}
-    Please answer the following open questions in a few sentences
+    Per favore, rispondi con attenzione alle seguenti domande
 {% endblock %}
 
 {% block content %}
-    {% formfields %}
+
+    <h5><p> Quanto sei d'accordo con la seguente affermazione? </p></h5>
+
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            {% for choice in field %}
+                <td>{{ choice }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
     {% next_button %}
 
     {% block styles %}

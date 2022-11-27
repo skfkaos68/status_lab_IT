@@ -1,0 +1,110 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   Dichiarazione di consenso
+{% endblock %}
+
+{% block content %}
+
+       <div class="container">
+        <ul class="myUL">
+        <ol type="1">
+      <p><li align="justify"> Ho ricevuto informazioni sufficienti su questo progetto di ricerca e capisco il mio ruolo in esso. Lo scopo della mia partecipazione a questo progetto e il futuro trattamento dei miei dati personali mi sono stati spiegati con chiarezza.
+        </li></p>
+      <p><li align="justify"> La mia partecipazione a questo progetto di ricerca è completamente volontaria. Non vi è alcuna coercizione esplicita o implicita a partecipare.
+        </li></p>
+      <p><li align="justify"> La mia partecipazione comporta il completamento di un breve sondaggio e una serie di attivita’ da svolgere.
+        </li></p>
+      <p><li align="justify"> Se mi dovessi sentire a disagio in qualsiasi modo durante la partecipazione, avro’ il diritto di ritirarmi e chiedere che tutti i dati raccolti vengano cancellati.
+        </li></p>
+      <p><li align="justify"> Mi è stato garantito esplicitamente che il ricercatore non mi identificherà per nome o funzione in alcun prodotto utilizzando le informazioni ottenute da questa intervista e che la mia riservatezza come partecipante a questo studio rimane sicura. I dati personali saranno trattati nel pieno rispetto della politica di protezione dei dati dell'IUE.
+        </li></p>
+      <p><li align="justify"> Mi è stato assicurato che questo progetto di ricerca è stato esaminato e approvato dal comitato etico dell'IUE. Il Comitato Etico dell'IUE può essere contattato a: ethics@eui.eu  per qualsiasi domanda riguardante l’aspetto etico del progetto. Il DPO dell'IUE può essere contattato tramite il seguente indirizzo data_protection_officer@eui.eu per qualsiasi domanda riguardante la protezione dati. </li></p>
+      <p><li align="justify"> Se contatto il responsabile del trattamento dei dati, il comitato etico dell'IUE o il DOP dell'IUE per esercitare i miei diritti di protezione dei dati, come la rettifica e il ritiro dei dati, con qualsiasi mezzo, acconsento all'ulteriore trattamento delle mie informazioni personali.
+        </li></p>
+      <p><li align="justify"> Ho letto attentamente e compreso appieno questo modulo in ogni sua parte. Tutte le mie domande hanno ricevuto risposta soddisfacente, e accetto volontariamente di partecipare a questo studio.
+        </li></p>
+</ol>
+    </ul>
+</div>
+
+<p align="justify"> Per ulteriori informazioni o domande è possibile contattare il Laboratorio per la sperimentazione nelle scienze sociali (BLESS) di Bologna: dse.bless@unibo.it. Inoltre, puoi richiedere l'accesso ai tuoi dati personali nonché la loro rettifica o cancellazione contattando BLESS entro 14 giorni dalla data di partecipazione. </p>
+
+<p align="justify"> Facendo clic sul pulsante " Successivo" qui sotto, accetto di partecipare a un progetto di ricerca condotto dal dottorando Tae Kyeong Yun, dell'Istituto Universitario Europeo (IUE) di Firenze, Italia. </p>
+
+{#<p align="justify"> I agree to participate in a research project conducted by the PhD researcher Tae Kyeong Yun, from the European University Institute (EUI) in Florence, Italy. </p>#}
+{#<div>#}
+{#    <button name="consent_accepted" style="background-color: lightsteelblue" value="True">Yes</button>#}
+{#    <button name="consent_accepted" style="background-color: lightsteelblue" value="False">No</button>#}
+{#</div>#}
+
+
+    {% block styles %}
+    <style type="text/css">
+        .otree-title {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 0 10px 0;
+            padding: 20px;
+        }
+
+        .otree-timer {
+            background: lightsteelblue;
+            color: white;
+            border-color: white;
+        }
+
+        .otree-body {
+            text-indent: each-line;
+        }
+
+        .box-heading {
+            background-color: steelblue;
+            color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 10px 10px 10px 24px;
+        }
+
+        .table-style {
+            color: black;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .table-borders {
+            border: solid;
+            border: steelblue;
+            background-color: #ecf2f9;
+            align-content: center;
+
+        }
+
+        .offer {
+            background-color: whitesmoke;
+            color: navy;
+            padding: 1px 10px 1px 10px;
+            border: groove;
+            border-color: lightsteelblue;
+            font-weight: bold;
+            margin: 1px;
+        }
+
+        .otree-btn-next {
+            background-color: steelblue;
+            color: white;
+            padding: 5px 10px 5px 10px;
+
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: bolder;
+            color: #24435c;
+        }
+
+    </style>
+{% endblock %}
+
+    {% next_button %}
+
+{% endblock %}
+

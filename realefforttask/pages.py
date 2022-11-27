@@ -28,7 +28,10 @@ class Second_stageA(Page):
     def is_displayed(self):
         player = self.player
         return player.type ==0
-
+class Second_stageA2(Page):
+    def is_displayed(self):
+        player = self.player
+        return player.type ==0
 class Second_stageB(Page):
     def is_displayed(self):
         player = self.player
@@ -38,9 +41,8 @@ class Post_Survey(Page):
     # def is_displayed(self):
     #     player = self.player
     #     return player.id_in_group >=  1 and player.id_in_group <= 10
-
     form_model = 'player'
-    form_fields = ['agree_statement', 'agree_statement2', 'agree_statement3', 'agree_statement4']
+    form_fields = ['age', 'gender', 'race', 'other_race']
 
 class Post_Survey2(Page):
     pass
@@ -49,7 +51,7 @@ class Post_Survey2(Page):
     #     return player.id_in_group >=  1 and player.id_in_group <= 10
 
     form_model = 'player'
-    form_fields = ['Video_frequency', 'Video_frequency2', 'Video_frequency3']
+    form_fields = ['salient_gender_men', 'salient_gender_women', 'others_performance', 'which_group_better']
 
 class Post_Survey3(Page):
     pass
@@ -58,16 +60,23 @@ class Post_Survey3(Page):
     #     return player.id_in_group >=  1 and player.id_in_group <= 10
 
     form_model = 'player'
-    form_fields = ['Video_opinion', 'Video_opinion2', 'Video_opinion3']
+    form_fields = ['participate_less', 'evaluative_threat', 'evaluative_threat2']
 
 class Post_Survey4(Page):
-    pass
-    # def is_displayed(self):
-    #     player = self.player
-    #     return player.id_in_group >=  1 and player.id_in_group <= 10
+    def is_displayed(self):
+        player = self.player
+        return player.gender == 1
 
     form_model = 'player'
-    form_fields = ['open_question', 'open_question2', 'open_question3', 'open_question4']
+    form_fields = ['verbal_dominance_for_women']
+
+class Post_Survey5(Page):
+    def is_displayed(self):
+        player = self.player
+        return player.gender == 0
+
+    form_model = 'player'
+    form_fields = ['verbal_dominance_for_men']
 
 # class Wait_others(WaitPage):
 #     def is_displayed(self):
@@ -79,8 +88,10 @@ class Results(Page):
     # def is_displayed(self):
     #     player = self.player
     #     return player.id_in_group >=  1 and player.id_in_group <= 10
+    form_model = 'player'
+    form_fields = ['open_comment']
 
 page_sequence = [
     WorkPage, Type_attention, Second_stageA, Second_stageB,
-    Post_Survey, Post_Survey2, Post_Survey3, Post_Survey4, Results
+    Post_Survey, Post_Survey2, Post_Survey3, Post_Survey4, Post_Survey5, Results
 ]

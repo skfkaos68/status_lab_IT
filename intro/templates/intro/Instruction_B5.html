@@ -1,38 +1,21 @@
 {% extends "global/Page.html" %}
-{% load staticfiles otree_tags %}
+{% load otree static %}
 
 {% block title %}
-    Esercizio di somma di due matrici
+    Istruzione
 {% endblock %}
 
 {% block content %}
-    <!--The next line adds the task specific content, getting the file name through the get_or_create_task function.-->
-    <div class="task-container">{{ player.get_or_create_task.html_body|safe }}</div>
-    <div>La tua risposta è:</div>
-    <input type="text" id="answer" class="offer" style="background-color: white" required>
-    <button class="answer btn btn-outline-dark" type="button" data-feedback="false">Rispondere</button>
+         <p align="justify"> Per ogni somma corretta riceverai 1 euro e per ogni somma errata riceverai 0 euro. Il numero totale di euro che hai guadagnato sarà visibile sullo schermo alla fine di questa fase.
+        </p>
 
-    <p> Numero di tentativi: <span id="num_tasks_total">{{ player.num_tasks_total }}</span></p>
-    <p> Numero di somme corretta: <span id="num_tasks_correct"> {{ player.num_tasks_correct }}</span></p>
-{% endblock %}
+        <p align="justify"> Ricorda che gli studi hanno scoperto che le persone che svolgono bene un compito come questo hanno più successo nella vita professionale. Non saprai come le persone si comportano generalmente in questo compito. Né saprai i punteggi che gli altri partecipanti hanno ottenuto nell’attività di oggi.
+        </p>
 
-{% block scripts %}
-{% include 'realefforttask/includes/js_work_page.html' %}
-    <script>
-        $(function () {
-            $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
-                    event.preventDefault();
-                    return false;
-                }
-            });
+        <p align="justify"> Ora i partecipanti di tipo A lasceranno la stanza, ciascuno per alcuni minuti. Si prega di rimanere seduti in silenzio fino a quando questo non sarà stato completato.
+        </p>
 
-
-        });
-    </script>
-    
-{% endblock %}
-{% block styles %}
+    {% block styles %}
     <style type="text/css">
         .otree-title {
             background-color: steelblue;
@@ -95,3 +78,10 @@
 
     </style>
 {% endblock %}
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
+

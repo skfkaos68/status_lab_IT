@@ -35,7 +35,7 @@ SESSION_CONFIGS = [
     {
         'name': 'realefforttask',
         'display_name': 'Real Effort Task - 2 matrices',
-        'num_demo_participants': 110,
+        'num_demo_participants': 11,
         'app_sequence': ['intro','realefforttask'],
         'task': 'TwoMatrices',
         'task_params': {'difficulty': 10},
@@ -44,10 +44,52 @@ SESSION_CONFIGS = [
 
 ]
 
+ROOMS = [
+    dict(
+        name='lab_01',
+        display_name='lab session 1',
+    ),
+    dict(
+        name='lab_02',
+        display_name='lab session 2',
+    ),
+    dict(
+        name='lab_03',
+        display_name='lab session 3',
+    ),
+    dict(
+        name='lab_04',
+        display_name='lab session 4',
+    ),
+    dict(
+        name='lab_05',
+        display_name='lab session 5',
+    ),
+    dict(
+        name='lab_06',
+        display_name='lab session 6',
+    ),
+    dict(
+        name='lab_07',
+        display_name='lab session 7',
+    ),
+    dict(
+        name='lab_08',
+        display_name='lab session 8',
+    ),
+    dict(
+        name='lab_09',
+        display_name='lab session 9',
+    ),
+    dict(
+        name='lab_10',
+        display_name='lab session 10',
+    ),
+]
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'it'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'EUR'
@@ -68,7 +110,8 @@ AUTH_LEVEL = environ.get('OTREE_AUTH_LEVEL')
 
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
-ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+# ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+ADMIN_PASSWORD = "shit24"
 
 # Consider '', None, and '0' to be empty/false
 DEBUG = (environ.get('OTREE_PRODUCTION') in {None, '', '0'})

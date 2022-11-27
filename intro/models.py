@@ -37,29 +37,14 @@ class Player(BasePlayer):
             player.role = 'A'
         elif player.id_in_group > 5 and player.id_in_group <= 10:
             player.role = 'B'
-        elif player.id_in_group == 11:
-            player.role = 'C'
+        # elif player.id_in_group == 11:
+        #     player.role = 'C'
 
-    player_id = models.IntegerField(label="What is your station id?")
-    age = models.IntegerField(label="What is your age?")
-    sex = models.IntegerField(choices=[
-        [0, 'man'],
-        [1, 'woman'],
-    ], widget=widgets.RadioSelect)
-    race = models.IntegerField(choices=[
-        [0, 'White'],
-        [1, 'Black'],
-        [2, 'Hispanic'],
-        [3, 'Asian'],
-        [4, 'Other']
-    ], widget=widgets.RadioSelect)
-    other_race = models.StringField(blank=True, label="If you chose other in the previous question, "
-                                                      "please write down your answer")
+    station_id = models.IntegerField(label="Qual è l'id della postazione (station ID)?")
     type = models.IntegerField(choices=[
         [0, 'A'],
         [1, 'B'],
-        [2, 'C'],
-    ], widget=widgets.RadioSelect, label="What is your player type?")
+    ], widget=widgets.RadioSelect, label="Che tipo di giocatore sei?")
 
     # number_of_AB = models.IntegerField(
     #     widget=widgets.RadioSelect,

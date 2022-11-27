@@ -1,38 +1,24 @@
 {% extends "global/Page.html" %}
-{% load staticfiles otree_tags %}
+{% load otree static %}
 
 {% block title %}
-    Esercizio di somma di due matrici
+    Istruzione
 {% endblock %}
 
 {% block content %}
-    <!--The next line adds the task specific content, getting the file name through the get_or_create_task function.-->
-    <div class="task-container">{{ player.get_or_create_task.html_body|safe }}</div>
-    <div>La tua risposta è:</div>
-    <input type="text" id="answer" class="offer" style="background-color: white" required>
-    <button class="answer btn btn-outline-dark" type="button" data-feedback="false">Rispondere</button>
+         <p align="justify"> Iniziamo ora con la fase 1.
+        </p>
 
-    <p> Numero di tentativi: <span id="num_tasks_total">{{ player.num_tasks_total }}</span></p>
-    <p> Numero di somme corretta: <span id="num_tasks_correct"> {{ player.num_tasks_correct }}</span></p>
-{% endblock %}
+        <p align="justify"> Nella fase 1 tutti i partecipanti di tipo A e di tipo B eseguiranno autonomamente un compito per 15 minuti.
+        </p>
 
-{% block scripts %}
-{% include 'realefforttask/includes/js_work_page.html' %}
-    <script>
-        $(function () {
-            $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
-                    event.preventDefault();
-                    return false;
-                }
-            });
+        <p align="justify"> Questo è un compito importante che viene spesso utilizzato per misurare le capacità delle persone. Molti studi scientifici hanno scoperto che le persone che svolgono bene un compito come questo hanno più successo nella vita professionale rispetto alle persone che lo fanno meno bene. Tuttavia, non ti verrà comunicato quale sia generalmente un punteggio buono o cattivo per questo compito.
+        </p>
 
+        <p align="justify"> Ti descriviamo qui di seguito il compito. Vedrai due matrici sullo schermo del computer. Ogni matrice ha 10 righe e 10 colonne ed è riempita con numeri generati casualmente. Il tuo compito è quello di trovare il numero più grande in ciascuna delle matrici e poi sommarle. Non è consentito utilizzare calcolatrici, e si prega di rispettare questa regola perché è molto importante. Puoi usare la carta e la matita che hai trovato sulla tua scrivania.
+        </p>
 
-        });
-    </script>
-    
-{% endblock %}
-{% block styles %}
+    {% block styles %}
     <style type="text/css">
         .otree-title {
             background-color: steelblue;
@@ -95,3 +81,10 @@
 
     </style>
 {% endblock %}
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
+

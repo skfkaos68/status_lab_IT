@@ -1,38 +1,23 @@
 {% extends "global/Page.html" %}
-{% load staticfiles otree_tags %}
+{% load otree static %}
 
 {% block title %}
-    Esercizio di somma di due matrici
+    Istruzione - Fase 2
 {% endblock %}
 
 {% block content %}
-    <!--The next line adds the task specific content, getting the file name through the get_or_create_task function.-->
-    <div class="task-container">{{ player.get_or_create_task.html_body|safe }}</div>
-    <div>La tua risposta è:</div>
-    <input type="text" id="answer" class="offer" style="background-color: white" required>
-    <button class="answer btn btn-outline-dark" type="button" data-feedback="false">Rispondere</button>
+<p align="justify"> Parte 2
+        </p>
+        <p align="justify"> A questo punto ogni partecipante A aprirà la busta e leggerà ad alta voce il testo al partecipante C. Dopo di che, tutti i partecipanti A torneranno alle loro scrivanie. I partecipanti di tipo B rimarranno seduti durante questo processo e non saranno informati su cosa faranno i partecipanti A. </p>
 
-    <p> Numero di tentativi: <span id="num_tasks_total">{{ player.num_tasks_total }}</span></p>
-    <p> Numero di somme corretta: <span id="num_tasks_correct"> {{ player.num_tasks_correct }}</span></p>
-{% endblock %}
+        <p align="justify"> Ricorda che il partecipante C non sa quale compito hai svolto e cosa significa il punteggio. Gli è stato solo detto che si pensa che un punteggio più alto porti a una vita professionale di maggior successo. È importante sottolineare che questo partecipante conoscerà il tuo punteggio e come si classifica rispetto agli altri partecipanti A.
+        </p>
 
-{% block scripts %}
-{% include 'realefforttask/includes/js_work_page.html' %}
-    <script>
-        $(function () {
-            $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
-                    event.preventDefault();
-                    return false;
-                }
-            });
+    <p align="justify"> Successivamente, ti chiederemo di compilare un breve questionario. </p>
 
+    <p align="justify"> Per favore aspetta, lo sperimentatore verrà da te </p>
 
-        });
-    </script>
-    
-{% endblock %}
-{% block styles %}
+    {% block styles %}
     <style type="text/css">
         .otree-title {
             background-color: steelblue;
@@ -95,3 +80,10 @@
 
     </style>
 {% endblock %}
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
+
