@@ -7,16 +7,20 @@
 
 {% block content %}
 
-        <p align="justify"> <h5>
+        <p align="justify">
         In base al numero totale di risposte corrette, il pagamento aggiuntivo è di {{ participant.payoff }}
-         </h5></p>
+         </p>
 
         <p align="justify">
         {% if participant.payoff == 0 %}
             Insieme alla tua quota di partecipazione, riceverai un totale di € 7
 
+            {% elif participant.payoff >= 20 %}
+            Insieme alla tua quota di partecipazione, riceverai un totale di € 25
+
         {% else %}
             Insieme alla tua quota di partecipazione, riceverai un totale di {{ participant.payoff_plus_participation_fee }}
+
 
         {% endif %}
         </p>
@@ -25,6 +29,9 @@
         Riceverai il tuo pagamento a breve.
         </p>
 
+    {% formfields %}
+
+     {% next_button %}
 
     {% block styles %}
     <style type="text/css">

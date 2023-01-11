@@ -91,7 +91,10 @@ class Results(Page):
     form_model = 'player'
     form_fields = ['open_comment']
 
+class Results2(Page):
+    pass
+
 page_sequence = [
-    WorkPage, Type_attention, Second_stageA, Second_stageB,
-    Post_Survey, Post_Survey2, Post_Survey3, Post_Survey4, Post_Survey5, Results
+    WorkPage, Type_attention, Second_stageA, Second_stageA2, Second_stageB,
+    Post_Survey, Post_Survey2, Post_Survey3, Post_Survey4, Post_Survey5, Results, Results2
 ]

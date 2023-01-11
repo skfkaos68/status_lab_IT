@@ -6,10 +6,17 @@
 {% endblock %}
 
 {% block content %}
-        <h5><p align="justify"> Non cliccare su "Successivo". Lo sperimentatore annuncerà quando cliccare il pulsante "Avanti".
+
+        <h5><p align="justify"> Il pulsante "Successivo" apparirà presto sullo schermo.
+        </p></h5>
+
+        <h5><p align="justify"> Ma non cliccare su "Successivo". Lo sperimentatore annuncerà quando cliccare il pulsante "Successivo".
         </p></h5>
 
         <h5><p align="justify"> Se fai clic su "Successivo", l'attività inizierà immediatamente.
+        </p></h5>
+
+        <h5><p align="justify"> Se inizi l'attività prima dell'annuncio, ciò influirà sul tuo pagamento!
         </p></h5>
 
     {% block styles %}
@@ -76,7 +83,13 @@
     </style>
 {% endblock %}
 
-    {% next_button %}
+<script>
+    window.onload = function () {
+setTimeout(function(){document.querySelector("#Next").style.visibility = "visible";}, 65000);
+    }
+</script>
+
+<button class="o-tree-btn-next btn btn-primary" id="Next" style="visibility:hidden;">Successivo</button>
 
 {% endblock %}
 

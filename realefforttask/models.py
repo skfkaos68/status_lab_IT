@@ -23,7 +23,7 @@ class Constants(BaseConstants):
     # this parameter defines how much time a user will stay on a RET page per round (in seconds)
     task_time = 3000
     PRACTICE_TIME_SEC = 60
-    WORKING_TIME_SEC = 30
+    WORKING_TIME_SEC = 3
 
 class Subsession(BaseSubsession):
     def creating_session(self):
@@ -65,7 +65,7 @@ class Player(BasePlayer):
         [3, 'Asiatico'],
         [4, 'Altri']
     ], widget=widgets.RadioSelect)
-    other_race = models.StringField(blank=True, label="Se hai scelto 'altri' nella domanda precedente, scrivi la tua risposta")
+    other_race = models.StringField(blank=True, label="Se hai scelto 'Altri' nella domanda precedente, scrivi la tua risposta")
     salient_gender_men = models.IntegerField(label = "Ricordi quanti uomini stavano aspettando insieme a te all'inizio dell'esperimento?", choices=[1,2,3,4,5,6,7,8])
     salient_gender_women = models.IntegerField(label = "Ricordi quante donne stavano aspettando insieme a te all'inizio dell'esperimento?", choices=[1,2,3,4,5,6,7,8])
     others_performance = models.LongStringField(label = "Rispetto a te, come ti aspetti che gli altri partecipanti abbiano svolto il compito e perché?")
@@ -124,7 +124,7 @@ class Player(BasePlayer):
         [6, 'Fortemente in accordo']
     ], widget=widgets.RadioSelect, label="Rispetto all'interazione faccia a faccia, le donne tendono a dominare la conversazione più degli uomini in videoconferenze.")
 
-    open_comment = models.LongStringField(label= "Se vuoi, puoi lasciare un commento qui sotto.")
+    open_comment = models.LongStringField(blank=True, label= "Se vuoi, puoi lasciare un commento qui sotto.")
 
     _num_tasks_correct = models.IntegerField(default=0)
     _num_tasks_total = models.IntegerField(default=0)
